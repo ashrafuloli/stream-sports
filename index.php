@@ -68,7 +68,7 @@ if (function_exists('cs_framework_init')) {
 
 				<?php
 				if (function_exists('cs_framework_init')) {
-					if (1 == cs_get_option('blog-sidebar')) {
+					if (! is_active_sidebar( 'sidebar-1' )) {
 						get_sidebar();
 					}
 				}

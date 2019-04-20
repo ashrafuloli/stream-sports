@@ -52,8 +52,58 @@ endif;
 
 	<header id="masthead" class="site-header">
 		<div class="container">
-			<div class="row align-items-center primary-header">
-				<div class="col-xl-6">
+			<div class="d-none d-lg-block">
+				<div class="row align-items-center primary-header">
+					<div class="col-6">
+						<div class="site-branding">
+							<?php
+							if (has_custom_logo()) :
+								the_custom_logo();
+							else :
+								?>
+								<h2 class="site-title">
+									<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
+								</h2>
+							<?php endif; ?>
+						</div><!-- .site-branding -->
+					</div>
+					<?php if(function_exists('cs_framework_init')): ?>
+						<div class="col-6">
+							<div class="social-link">
+								<?php if(!empty(cs_get_option('social-facebook'))): ?>
+									<a href="<?php echo esc_url(cs_get_option('social-facebook')) ?>"><i class="fab fa-facebook-f"></i></a>
+								<?php endif;
+								if(!empty(cs_get_option('social-twitter'))): ?>
+									<a href="<?php echo esc_url(cs_get_option('social-twitter')) ?>"><i class="fab fa-twitter"></i></a>
+								<?php endif;
+								if(!empty(cs_get_option('social-google-plus'))): ?>
+									<a href="<?php echo esc_url(cs_get_option('social-google-plus')) ?>"><i class="fab fa-google-plus"></i></a>
+								<?php endif;
+								if(!empty(cs_get_option('social-pinterest'))): ?>
+									<a href="<?php echo esc_url(cs_get_option('social-pinterest')) ?>"><i class="fab fa-instagram"></i></a>
+								<?php endif;
+								if(!empty(cs_get_option('social-instagram'))): ?>
+									<a href="<?php echo esc_url(cs_get_option('social-instagram')) ?>"><i class="fab fa-pinterest"></i></a>
+								<?php endif; ?>
+							</div>
+						</div>
+					<?php endif; ?>
+				</div>
+			</div>
+
+			<nav id="site-navigation" class="site-navigation">
+				<?php
+				wp_nav_menu(array(
+					'theme_location' => 'primary',
+					'menu_id' => 'primary-menu',
+					'container' => '',
+				));
+				?>
+			</nav><!-- #site-navigation -->
+
+			<!-- Mobile Menu -->
+			<div class="container d-block d-lg-none">
+				<div class="mobile-menu clearfix d-md-block d-lg-none">
 					<div class="site-branding">
 						<?php
 						if (has_custom_logo()) :
@@ -66,38 +116,8 @@ endif;
 						<?php endif; ?>
 					</div><!-- .site-branding -->
 				</div>
-				<?php if(function_exists('cs_framework_init')): ?>
-				<div class="col-xl-6">
-					<div class="social-link">
-						<?php if(!empty(cs_get_option('social-facebook'))): ?>
-						<a href="<?php echo esc_url(cs_get_option('social-facebook')) ?>"><i class="fab fa-facebook-f"></i></a>
-						<?php endif;
-						if(!empty(cs_get_option('social-twitter'))): ?>
-						<a href="<?php echo esc_url(cs_get_option('social-twitter')) ?>"><i class="fab fa-twitter"></i></a>
-						<?php endif;
-						if(!empty(cs_get_option('social-google-plus'))): ?>
-						<a href="<?php echo esc_url(cs_get_option('social-google-plus')) ?>"><i class="fab fa-google-plus"></i></a>
-						<?php endif;
-						if(!empty(cs_get_option('social-pinterest'))): ?>
-						<a href="<?php echo esc_url(cs_get_option('social-pinterest')) ?>"><i class="fab fa-instagram"></i></a>
-						<?php endif;
-						if(!empty(cs_get_option('social-instagram'))): ?>
-						<a href="<?php echo esc_url(cs_get_option('social-instagram')) ?>"><i class="fab fa-pinterest"></i></a>
-						<?php endif; ?>
-					</div>
-				</div>
-				<?php endif; ?>
 			</div>
-
-			<nav id="site-navigation" class="site-navigation">
-				<?php
-				wp_nav_menu(array(
-					'theme_location' => 'primary',
-					'menu_id' => 'primary-menu',
-					'container' => '',
-				));
-				?>
-			</nav><!-- #site-navigation -->
+			<!-- //Mobile Menu -->
 		</div>
 	</header><!-- #masthead -->
 

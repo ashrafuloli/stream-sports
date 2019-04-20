@@ -135,7 +135,7 @@ if (!function_exists('stream_sports_post_navigation')) :
 			<div class="row">
 				<?php if ($prev_post): ?>
 					<!-- Previous Post -->
-					<div class="col-xl-6">
+					<div class="col-xl-6 col-md-6">
 						<div class="previous-post-link">
 							<?php previous_post_link('<div class="previous">%link</div>', '<i class="fas fa-long-arrow-alt-left"></i>' . esc_html__( 'Previous Post', 'stream-sports' )); ?>
 						</div>
@@ -144,7 +144,7 @@ if (!function_exists('stream_sports_post_navigation')) :
 
 				<?php if ($next_post): ?>
 					<!-- Next Post -->
-					<div class="col-xl-6">
+					<div class="col-xl-6 col-md-6">
 						<div class="next-post-link">
 							<?php next_post_link('<div class="next">%link</div>', esc_html__( 'Next Post', 'stream-sports' ) . '<i class="fas fa-long-arrow-alt-right"></i>'); ?>
 						</div>

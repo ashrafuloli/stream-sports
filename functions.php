@@ -91,7 +91,7 @@ if (!function_exists('stream_sports_setup')) :
 
 		add_image_size('stream-sports-thumbnail', 300, 260, true);
 		add_image_size('stream-sports-single-thumbnail', 1000, 450, true);
-		add_image_size('stream-sports-page-thumbnail', 1400, 800, true);
+		add_image_size('stream-sports-page-thumbnail', 1000, 450, true);
 	}
 endif;
 add_action('after_setup_theme', 'stream_sports_setup');
@@ -140,6 +140,16 @@ function stream_sports_widgets_init()
 		'after_title' => '</h2>',
 	));
 
+	register_sidebar(array(
+		'name' => esc_html__('Sports Post Add', 'stream-sports'),
+		'id' => 'add-sports',
+		'description' => esc_html__('Add widgets here.', 'stream-sports'),
+		'before_widget' => '<div id="%1$s" class="add-widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widget-title">',
+		'after_title' => '</h4>',
+	));
+
 }
 
 add_action('widgets_init', 'stream_sports_widgets_init');
@@ -155,6 +165,7 @@ function stream_sports_scripts()
 	wp_enqueue_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '4.6.3');
 	wp_enqueue_style('meanmenu', get_template_directory_uri() . '/assets/css/meanmenu.css', array(), '4.6.3');
 	wp_enqueue_style('stream-sports-style', get_stylesheet_uri());
+	wp_enqueue_style('responsive', get_template_directory_uri() . '/assets/css/responsive.css', array(), '4.6.3');
 
 	wp_enqueue_script('popper', get_template_directory_uri() . '/assets/js/popper.min.js', array('jquery'), '20151215', true);
 	wp_enqueue_script('bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '20151215', true);

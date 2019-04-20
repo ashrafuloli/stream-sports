@@ -1,0 +1,77 @@
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 320px) and (max-width: 767px) {
+	.post-wrapper {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+
+	.post-wrapper .entry-content {
+		width: 100%;
+	}
+
+	.post-wrapper .entry-header {
+		width: 100%;
+	}
+
+	a.post-thumbnail img {
+		width: 100%;
+		height: 100%;
+	}
+
+	.sports-wrapper {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+
+	.match-time {
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		min-height: 100px;
+	}
+
+	.sports-wrapper .watch-now {
+		right: 50%;
+		-webkit-transform: translateX(50%);
+		-ms-transform: translateX(50%);
+		transform: translateX(50%);
+	}
+
+	.match-content {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+
+	.team-one,
+	.team-tow {
+		width: 100%;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+
+	.previous-post-link {
+		margin-bottom: 10px;
+	}
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+}

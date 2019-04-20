@@ -8,6 +8,15 @@
 		$('.preloader').delay(200).fadeOut('slow');
 	}());
 
+	/* Mobile menu */
+	$('nav.site-navigation').meanmenu({
+		meanMenuClose: '<i class="fas fa-times"></i>',
+		meanMenuCloseSize: '18px',
+		meanScreenWidth: '991',
+		meanExpandableChildren: true,
+		meanMenuContainer: '.mobile-menu'
+	});
+
 	document.querySelectorAll(".play-bar .range").forEach(function(el) {
 		el.oninput =function(){
 			var valPercent = (el.valueAsNumber  - parseInt(el.min)) /

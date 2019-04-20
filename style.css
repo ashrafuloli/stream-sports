@@ -376,6 +376,36 @@ a img.aligncenter {
 	color: #fff;
 }
 
+
+/* mobile menu*/
+
+.mobile-menu .site-branding {
+	display: inline-block;
+	position: absolute;
+	z-index: 99999;
+	left: 0;
+	top: 0;
+	height: 66px;
+	line-height: 64px;
+}
+
+.site-branding {
+	display: inline-block;
+}
+
+.site-branding img {
+	width: 100%;
+}
+
+.mean-container a.meanmenu-reveal span {
+	background: #fff;
+}
+
+.mobile-menu a.meanmenu-reveal {
+	color: #fff !important;
+}
+
+
 /*--------------------------------------------------------------
 ## Site Footer
 --------------------------------------------------------------*/
@@ -416,6 +446,11 @@ a img.aligncenter {
 
 .post-wrapper .entry-header {
 	width: 300px;
+}
+
+a.post-thumbnail img {
+	min-width: 300px;
+	min-height: 260px;
 }
 
 
@@ -578,6 +613,7 @@ ul.pagination li a:hover {
 
 .single-post-wrapper .post-thumbnail {
 	margin-bottom: 30px;
+	text-align: center;
 }
 
 .single-post-wrapper .entry-meta {
@@ -1591,7 +1627,7 @@ links tabs
 */
 
 .tab-link-wrapper {
-	padding: 80px 0;
+	padding: 80px 0 0;
 }
 
 .links-nav {
@@ -1626,7 +1662,7 @@ links tabs
 }
 
 .video-wrapper {
-	width: 600px;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -1866,4 +1902,12 @@ preloader
 	position: absolute;
 	top: 50%;
 	width: 200px;
+}
+
+/*
+add widget
+*/
+
+.add-widget .widget-title{
+	color: #fff;
 }
